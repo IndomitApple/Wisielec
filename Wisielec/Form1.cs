@@ -12,39 +12,39 @@ namespace Wisielec
 {
     public partial class Form1 : Form
     {
-        string slowo;
-        int ile_pudel;
+        string slowo; //Zmienna zawierające wylosowane do gry słowo
+        int ile_pudel; //Liczba "pudeł" czyli błędnych trafień
         public Form1()
         {
             InitializeComponent();
-            losuj_slowo();
+            losuj_slowo(); //Metoda przygotowująca stan gry po jej uruchomieniu
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e) //Po kliknięciu przycisku "Sprawdź"
         {
-            string litera = textBox1.Text;
-            bool czy_trafiony = false;
-            int gdzie_trafiony = 0;
-            for (int i = 1; i < 6; i++)
+            string litera = textBox1.Text; //Z textBox1 pobieramy literę, którą chcemy sprawdzić czy jest w słowie
+            bool czy_trafiony = false; //Czy litera jest w słowie, czy nie?
+            int gdzie_trafiony = 0; //Którą z kolei litere trafiliśmy?
+            for (int i = 1; i < 6; i++) //Ta pętla sprawdza czy w wylosowanym słowie jest litera którą podaliśmy
             {
-                if (Convert.ToString(slowo[i]) == litera)
+                if (Convert.ToString(slowo[i]) == litera) //Jeśli tak, przypisuje do zmiennej gdzie_trafiony którą z kolei litere trafiliśmy
                 {
                     czy_trafiony = true;
                     gdzie_trafiony = i;
                 }
 
-                if (czy_trafiony == false)
+                if (czy_trafiony == false) //Jeśli nie trafiliśmy litery, dodaje pudło i zmienia wyświetlaną grafikę
                 {
                     ile_pudel++;
-                    //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
+                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
+                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
+                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
+                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
+                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
+                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
                 }
 
-                if (czy_trafiony == true)
+                if (czy_trafiony == true) //Jeśli trafiliśmy, w odpowiedni label o treści _ wstawia literę którą trafiliśmy, w odp. miejscu
                 {
                     if (gdzie_trafiony == 0) label2.Text = litera;
                     if (gdzie_trafiony == 1) label3.Text = litera;
@@ -67,12 +67,12 @@ namespace Wisielec
         private void losuj_slowo()
         {
             
-            string[] slowa = { "krokusy", "liliput", "marchew", "selerek", "krakers", "klakier" };
-            int ile_slow = slowa.Length;
+            string[] slowa = { "krokusy", "liliput", "marchew", "selerek", "krakers", "klakier" }; //Słowa z których będzie wylosowane słowo do gry
+            int ile_slow = slowa.Length; //Długość tabeli ze słowami, czyli ilość możliwych słów
 
-            Random gen = new Random();
-            int indeks_slowa = gen.Next(0, ile_slow);
-            slowo = slowa[indeks_slowa];
+            Random gen = new Random(); //Deklaracja generatora losowego
+            int indeks_slowa = gen.Next(0, ile_slow); //Tu jest losowany indeks słowa które jest wybrane do gry
+            slowo = slowa[indeks_slowa]; //Słowo o wylosowanym indeksie jest przypisane do zmiennej "słowo"
             label2.Text = Convert.ToString(slowo[0]); //Pierwsze pole _ ustawia jako pierwsza literę wylosowanego wyrazu
             label8.Text = Convert.ToString(slowo[6]); //Ostatnie pole _ ustawia jako ostatnią (siódmą) literę wylosowanego wyrazu
         }
