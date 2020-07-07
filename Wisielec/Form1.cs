@@ -44,13 +44,17 @@ namespace Wisielec
                     //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
                 }
 
-                if (gdzie_trafiony == 1) label2.Text = litera;
-                if (gdzie_trafiony == 2) label3.Text = litera;
-                if (gdzie_trafiony == 3) label4.Text = litera;
-                if (gdzie_trafiony == 4) label5.Text = litera;
-                if (gdzie_trafiony == 5) label6.Text = litera;
-                if (gdzie_trafiony == 6) label7.Text = litera;
-                if (gdzie_trafiony == 7) label8.Text = litera;
+                if (czy_trafiony == true)
+                {
+                    if (gdzie_trafiony == 0) label2.Text = litera;
+                    if (gdzie_trafiony == 1) label3.Text = litera;
+                    if (gdzie_trafiony == 2) label4.Text = litera;
+                    if (gdzie_trafiony == 3) label5.Text = litera;
+                    if (gdzie_trafiony == 4) label6.Text = litera;
+                    if (gdzie_trafiony == 5) label7.Text = litera;
+                    if (gdzie_trafiony == 6) label8.Text = litera;
+                }
+
             }
             
         }
@@ -69,8 +73,8 @@ namespace Wisielec
             Random gen = new Random();
             int indeks_slowa = gen.Next(0, ile_slow);
             slowo = slowa[indeks_slowa];
-            label2.Text = Convert.ToString(slowo[0]);
-            label8.Text = Convert.ToString(slowo[6]);
+            label2.Text = Convert.ToString(slowo[0]); //Pierwsze pole _ ustawia jako pierwsza literę wylosowanego wyrazu
+            label8.Text = Convert.ToString(slowo[6]); //Ostatnie pole _ ustawia jako ostatnią (siódmą) literę wylosowanego wyrazu
         }
     }
 }
