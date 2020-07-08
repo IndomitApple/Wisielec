@@ -33,16 +33,7 @@ namespace Wisielec
                     gdzie_trafiony = i;
                 }
 
-                if (czy_trafiony == false) //Jeśli nie trafiliśmy litery, dodaje pudło i zmienia wyświetlaną grafikę
-                {
-                    ile_pudel++;
-                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                    if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                }
+
 
                 if (czy_trafiony == true) //Jeśli trafiliśmy, w odpowiedni label o treści _ wstawia literę którą trafiliśmy, w odp. miejscu
                 {
@@ -56,7 +47,16 @@ namespace Wisielec
                 }
 
             }
-            
+            if (czy_trafiony == false) //Jeśli nie trafiliśmy litery, dodaje pudło i zmienia wyświetlaną grafikę
+            {
+                ile_pudel++;
+                if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources._3; }
+                if (ile_pudel == 2) { pictureBox1.Image = Wisielec.Properties.Resources._6; }
+                if (ile_pudel == 3) { pictureBox1.Image = Wisielec.Properties.Resources._9; }
+                if (ile_pudel == 4) { pictureBox1.Image = Wisielec.Properties.Resources._11; }
+                //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
+                //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
