@@ -54,8 +54,6 @@ namespace Wisielec
                 if (ile_pudel == 2) { pictureBox1.Image = Wisielec.Properties.Resources._6; }
                 if (ile_pudel == 3) { pictureBox1.Image = Wisielec.Properties.Resources._9; }
                 if (ile_pudel == 4) { pictureBox1.Image = Wisielec.Properties.Resources._11; }
-                //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
-                //if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources.r_3_1; }
             }
         }
 
