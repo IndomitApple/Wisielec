@@ -8,13 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
+
 namespace Wisielec
 {
     public partial class Form1 : Form
     {
         string slowo;
         ///Zmienna zawierające wylosowane do gry słowo
-        int ile_pudel;
+        public int ile_pudel;
         ///Liczba "pudeł" czyli błędnych trafień
         public Form1()
         {
@@ -47,13 +49,35 @@ namespace Wisielec
                 if (czy_trafiony == true)
                     ///Jeśli trafiliśmy, w odpowiedni label o treści _ wstawia literę którą trafiliśmy, w odp. miejscu
                 {
-                    if (gdzie_trafiony == 0) label2.Text = litera;
-                    if (gdzie_trafiony == 1) label3.Text = litera;
-                    if (gdzie_trafiony == 2) label4.Text = litera;
-                    if (gdzie_trafiony == 3) label5.Text = litera;
-                    if (gdzie_trafiony == 4) label6.Text = litera;
-                    if (gdzie_trafiony == 5) label7.Text = litera;
-                    if (gdzie_trafiony == 6) label8.Text = litera;
+
+                    switch (gdzie_trafiony)
+                    {
+                        case 0:
+                            label2.Text = litera;
+                            break;
+                        case 1:
+                            label3.Text = litera;
+                            break;
+                        case 2:
+                            label4.Text = litera;
+                            break;
+                        case 3:
+                            label5.Text = litera;
+                            break;
+                        case 4:
+                            label6.Text = litera;
+                            break;
+                        case 5:
+                            label7.Text = litera;
+                            break;
+                        case 6:
+                            label8.Text = litera;
+                            break;
+                        default:
+                            break;
+
+                    }
+
                 }
 
             }
@@ -61,10 +85,25 @@ namespace Wisielec
                 ///Jeśli nie trafiliśmy litery, dodaje pudło i zmienia wyświetlaną grafikę
             {
                 ile_pudel++;
-                if (ile_pudel == 1) { pictureBox1.Image = Wisielec.Properties.Resources._3; }
-                if (ile_pudel == 2) { pictureBox1.Image = Wisielec.Properties.Resources._6; }
-                if (ile_pudel == 3) { pictureBox1.Image = Wisielec.Properties.Resources._9; }
-                if (ile_pudel == 4) { pictureBox1.Image = Wisielec.Properties.Resources._11; }
+                switch (ile_pudel)
+                {
+                    case 0:
+                        pictureBox1.Image = Wisielec.Properties.Resources._3;
+                        break;
+                    case 1:
+                        pictureBox1.Image = Wisielec.Properties.Resources._3;
+                        break;
+                    case 2:
+                        pictureBox1.Image = Wisielec.Properties.Resources._3;
+                        break;
+                    case 3:
+                        pictureBox1.Image = Wisielec.Properties.Resources._3;
+                        break;
+                    default:
+                        break;
+
+                }
+
             }
         }
 
@@ -73,7 +112,9 @@ namespace Wisielec
 
         }
 
-        private void losuj_slowo()
+
+
+        public string losuj_slowo()
         {
             
             string[] slowa = { "krokusy", "liliput", "marchew", "selerek", "krakers", "klakier" }; //Słowa z których będzie wylosowane słowo do gry
@@ -90,6 +131,7 @@ namespace Wisielec
             ///Pierwsze pole _ ustawia jako pierwsza literę wylosowanego wyrazu
             label8.Text = Convert.ToString(slowo[6]);
             ///Ostatnie pole _ ustawia jako ostatnią (siódmą) literę wylosowanego wyrazu
+            return slowo;
         }
     }
 }

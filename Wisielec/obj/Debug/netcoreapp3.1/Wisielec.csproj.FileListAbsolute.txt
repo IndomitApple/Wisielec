@@ -4,13 +4,13 @@ C:\Users\Admin\source\repos\Wisielec\Wisielec\bin\Debug\netcoreapp3.1\Wisielec.r
 C:\Users\Admin\source\repos\Wisielec\Wisielec\bin\Debug\netcoreapp3.1\Wisielec.runtimeconfig.dev.json
 C:\Users\Admin\source\repos\Wisielec\Wisielec\bin\Debug\netcoreapp3.1\Wisielec.dll
 C:\Users\Admin\source\repos\Wisielec\Wisielec\bin\Debug\netcoreapp3.1\Wisielec.pdb
-C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.csprojAssemblyReference.cache
 C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.Form1.resources
 C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.Properties.Resources.resources
 C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.csproj.GenerateResource.cache
 C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.AssemblyInfoInputs.cache
 C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.AssemblyInfo.cs
-C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.csproj.CoreCompileInputs.cache
 C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.dll
 C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.pdb
 C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.genruntimeconfig.cache
+C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.csproj.CoreCompileInputs.cache
+C:\Users\Admin\source\repos\Wisielec\Wisielec\obj\Debug\netcoreapp3.1\Wisielec.csprojAssemblyReference.cache
